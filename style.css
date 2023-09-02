@@ -26,6 +26,7 @@ body {
 nav {
   background-color: var(--deepBlue);
   position: fixed !important;
+  z-index: 1;
   transition: 0.3s;
   width: 100%;
   top: 0;
@@ -223,6 +224,7 @@ nav form .btn:hover {
   color: var(--blueSky);
   padding: 5%;
   background-color: rgba(0, 0, 0, 0.3);
+  font-size: 0.9em;
 }
 
 .gallery-title-reverse h4 {
@@ -437,6 +439,9 @@ nav form .btn:hover {
   margin-bottom: 2%;
 }
 
+#question {
+  resize: none !important;
+}
 .ask-us-button {
   margin-top: 5%;
   width: 100%;
@@ -470,7 +475,7 @@ nav form .btn:hover {
 }
 /* Footer Styling End */
 
-/* media < 768 */
+/* media < 991 */
 @media only screen and (max-width: 991px) {
   body {
     background-color: var(--chocoDark);
