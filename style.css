@@ -216,16 +216,88 @@ nav form .btn:hover {
 }
 
 .gallery-title h4 {
-  margin: 1em 0px;
+  margin: 0.5em 0px;
   color: var(--blueSky);
 }
 
 .gallery-description {
   color: var(--blueSky);
   padding: 5%;
-  background-color: rgba(0, 0, 0, 0.3);
   font-size: 0.9em;
 }
+
+.description-box .gallery-description .extra {
+  display: none;
+}
+
+.description-box .gallery-description i {
+  display: inline;
+}
+
+.description-box .gallery-description input[type="checkbox"] {
+  display: block;
+  appearance: none;
+}
+
+.description-box .gallery-description label {
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+
+.description-box .gallery-description label:before {
+  content: "Read More";
+}
+
+.description-box .gallery-description input[type="checkbox"]:checked ~ label:before {
+  content: "Read Less";
+}
+
+.description-box .gallery-description .dots:has(~input[type="checkbox"]:checked) {
+  display: none;
+}
+
+.description-box .gallery-description .extra:has(~input[type="checkbox"]:checked) {
+  display: inline;
+}
+
+/* asdasda */
+.description-box-2 .gallery-description-reverse .extra2 {
+  display: none;
+}
+
+.description-box-2 .gallery-description-reverse i {
+  display: inline;
+}
+
+.description-box-2 .gallery-description-reverse input[type="checkbox"] {
+  display: block;
+  appearance: none;
+}
+
+.description-box-2 .gallery-description-reverse label {
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+
+.description-box-2 > .gallery-description-reverse > label:before {
+  content: "Read More";
+}
+
+.description-box-2 > .gallery-description-reverse > input[type="checkbox"]:checked ~ label:before {
+  content: "Read Less";
+}
+
+.description-box-2 .gallery-description-reverse .dots2:has(~input[type="checkbox"]:checked) {
+  display: none;
+}
+
+.description-box-2 .gallery-description-reverse .extra2:has(~input[type="checkbox"]:checked) {
+  display: inline;
+}
+
+
 
 .gallery-title-reverse h4 {
   margin-top: 0;
@@ -238,7 +310,6 @@ nav form .btn:hover {
   padding: 5%;
   margin-bottom: 1.7em;
   font-size: 0.9em;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 /* Gallery Styling End */
 
@@ -587,6 +658,19 @@ nav form .btn:hover {
   
   .gallery-description {
     color: white;
+  }
+
+  .dots, .dots2 {
+    display: none;
+  }
+
+  .description-box > input, label {
+    display: none;
+  }
+
+  .description-box .gallery-description .extra,
+  .description-box-2 .gallery-description-reverse .extra2 {
+    display: inline;
   }
   
   .gallery-title-reverse h4 {
